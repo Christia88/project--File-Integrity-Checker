@@ -9,10 +9,10 @@ from pydrive.drive import GoogleDrive
 import os
 
 emp_list=[]
-os.chdir(r"C:\Users\chris\Pymongo\pymongo_venv")
+os.chdir(r"C:\Users\Pymongo\pymongo_venv")
 BLOCK_SIZE = 65536
 myclient = MongoClient("mongodb://localhost:27017/")
-p=Path(r"C:\Users\chris\OneDrive\Desktop\hello")
+p=Path(r"C:\Users\Desktop\folder")
 dbnames = myclient.list_database_names()
 new_list=[]
 mod_file=[]
