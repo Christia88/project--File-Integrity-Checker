@@ -10,7 +10,7 @@ import datetime as datetime
 
 
 emp_list=[]
-os.chdir(r"C:\Users\chris\Pymongo\pymongo_venv")
+os.chdir(r"C:\Users\Pymongo\pymongo_venv")
 BLOCK_SIZE = 65536
 myclient = MongoClient("mongodb://localhost:27017/")
 dbnames = myclient.list_database_names()
@@ -87,11 +87,11 @@ def check_modify():
 
 def Two_step_verify(em):
     ss=0
-    port = 587  # For starttls
+    port = 587 
     smtp_server = "smtp.gmail.com"
     sender_email = "testfic.jabcrypt@gmail.com"
     receiver_email = em
-    password = "xrnbwropivwaddbh"
+    password = ""
     digit="1234567890"
     OTP=""
     for i in range(4):
@@ -101,9 +101,9 @@ def Two_step_verify(em):
 
     context = ssl.create_default_context()
     with smtplib.SMTP(smtp_server, port) as server:
-        server.ehlo()  # Can be omitted
+        server.ehlo() 
         server.starttls(context=context)
-        server.ehlo()  # Can be omitted
+        server.ehlo() 
         server.login(sender_email, password)
         server.sendmail(sender_email, receiver_email, message)
 
